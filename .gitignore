@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# chrome driver
+Missions_to_Mars/chromedriver.exe
+
 # C extensions
 *.so
 
