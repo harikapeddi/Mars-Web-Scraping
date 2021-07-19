@@ -31,19 +31,23 @@
             <h5>{{ mars_data.news_p }}</h5>
             <hr>
             <h5>See Mars Facts Below</h5>
-            {{mars_data.facts_table}}
+            <table>
+
+              {{mars_data.mars_table | safe}}
+
+            </table>
           </div>
         </div>
         <div class="col-6">
           <div class="jumbotron text-center" >
             <h4>Today's Featured Image</h4>
-            <img src="{{ mars_data.featured_img }}" alt="Featured Image" style="height: 500px; width: 500px;">
+            <img src="{{ mars_data.featured_img }}" alt="Featured Image" style="height: 500px; width: 500px; padding-bottom: 20px;">
           </div>
         </div>
       </div>
     </div>      
     
-    <div class="container">
+    <!-- <div class="container">
       <div class="row" style="background-color: #eea684;">
         <div class="col-6">
           <div class="jumbotron text-center" >
@@ -73,6 +77,28 @@
             <img src="{{ mars_data.hs_data_2 }}" alt="Featured Image" style="height: 500px; width: 500px;">
           </div>
         </div>
+      </div>   
+    </div> -->
+    <div class="container">
+      <div class="row" style="background-color: #eea684; height: 50px; align-items: center;">
+        <div class="col-12">
+          <div class="jumbotron text-center" >
+            <h3>Mars Hemispheres</h3>
+          </div>
+        </div>
+      </div>   
+    </div>
+    
+    <div class="container">
+      <div class="row" style="background-color: #be653b;">
+        {% for data in mars_data.hs_data %}
+        <div class="col-6 mb-3 mt-5">
+          <div class="jumbotron text-center" >
+            <h4>{{ data['title'] }}</h4>
+            <img src="{{ data['img_url'] }}" alt="Enhanced Image" style="height: 500px; width: 500px;">
+          </div>
+        </div>
+        {% endfor %}
       </div>   
     </div>
     
