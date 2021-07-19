@@ -30,18 +30,16 @@
             <h3>Latest News : {{ mars_data.news_title }}</h3>
             <h5>{{ mars_data.news_p }}</h5>
             <hr>
-            <h5>See Mars Facts Below</h5>
-            <table>
-
-              {{mars_data.mars_table | safe}}
-
-            </table>
+            <h4>Mars Facts</h4>
+            <div style="background-color: #eea684; text-align-last: left; border: 1px; height: 300px, width: 100px;;">
+              {{mars_data.facts_table | safe}}
+            </div>
           </div>
         </div>
         <div class="col-6">
           <div class="jumbotron text-center" >
             <h4>Today's Featured Image</h4>
-            <img src="{{ mars_data.featured_img }}" alt="Featured Image" style="height: 500px; width: 500px; padding-bottom: 20px;">
+            <img src="{{ mars_data.featured_img }}" alt="Featured Image" style="height: 610px; width: 500px; padding-bottom: 20px; align-items: center;">
           </div>
         </div>
       </div>

@@ -58,11 +58,7 @@ def scrape_info():
 
     facts_table.columns = ['Description', 'Value']
 
-    # facts_table.set_index(['Description', 'Value'], inplace=True)
-
-    # facts_table.index.name=None
-
-    mars_table = facts_table.to_html(classes="table table-striped")
+    mars_table = facts_table.to_html(classes="table table-striped", index=False)
 
 #     browser.quit()
 
