@@ -22,63 +22,39 @@
         </div>
       </div>
     </div>
-
     <div class="container">
-      <div class="row" style="background-color: #be653b;">
-        <div class="col-6">
+      <div class="row" style="background-color: #be653b; padding: 20px;">
+        <div class="col-12">
           <div class="jumbotron" >
             <h3>Latest News : {{ mars_data.news_title }}</h3>
             <h5>{{ mars_data.news_p }}</h5>
             <hr>
-            <h4>Mars Facts</h4>
-            <div style="background-color: #eea684; text-align-last: left; border: 1px; height: 300px, width: 100px;;">
-              {{mars_data.facts_table | safe}}
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="jumbotron text-center" >
-            <h4>Today's Featured Image</h4>
-            <img src="{{ mars_data.featured_img }}" alt="Featured Image" style="height: 610px; width: 500px; padding-bottom: 20px; align-items: center;">
           </div>
         </div>
       </div>
     </div>      
-    
-    <!-- <div class="container">
-      <div class="row" style="background-color: #eea684;">
-        <div class="col-6">
-          <div class="jumbotron text-center" >
-            <h4>{{ mars_data.hs_data_1_t }}</h4>
-            <img src="{{ mars_data.hs_data_1 }}" alt="Featured Image" style="height: 500px; width: 500px;">
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="jumbotron text-center" >
-            <h4>{{ mars_data.hs_data_2_t }}</h4>
-            <img src="{{ mars_data.hs_data_2 }}" alt="Featured Image" style="height: 500px; width: 500px;">
-          </div>
-        </div>
-      </div>      
-    </div>
+
     <div class="container">
-      <div class="row" style="background-color: #be653b;">
-        <div class="col-6">
-          <div class="jumbotron text-center" >
-            <h4>{{ mars_data.hs_data_3_t }}</h4>
-            <img src="{{ mars_data.hs_data_1 }}" alt="Featured Image" style="height: 500px; width: 500px;">
+      <div class="row" style="background-color: #be653b; padding-left: 20px; padding-right: 20px;">
+        <div class="col-6 mb-4">
+          <div class="jumbotron" >
+            <h4>Today's Featured Image</h4>
+            <img src="{{ mars_data.featured_img }}" alt="Featured Image" style="height: 435px; width: 600px; padding-bottom: 20px; align-items: center;">
           </div>
         </div>
-        <div class="col-6">
-          <div class="jumbotron text-center" >
-            <h4>{{ mars_data.hs_data_4_t }}</h4>
-            <img src="{{ mars_data.hs_data_2 }}" alt="Featured Image" style="height: 500px; width: 500px;">
+        <div class="col-6 mb-4">
+          <div class="jumbotron" >
+            <h4>Mars Facts</h4>
+            <div style="background-color: #eea684; text-align-last: left; border: 1px; height: 500px, width: 500px;;">
+              {{mars_data.facts_table | safe}}
+            </div>
           </div>
         </div>
-      </div>   
-    </div> -->
+        
+      </div>
+    </div>      
     <div class="container">
-      <div class="row" style="background-color: #eea684; height: 50px; align-items: center;">
+      <div class="row" style="background-color: #eea684; align-items: center; padding: 4px;">
         <div class="col-12">
           <div class="jumbotron text-center" >
             <h3>Mars Hemispheres</h3>
@@ -93,7 +69,7 @@
         <div class="col-6 mb-3 mt-5">
           <div class="jumbotron text-center" >
             <h4>{{ data['title'] }}</h4>
-            <img src="{{ data['img_url'] }}" alt="Enhanced Image" style="height: 500px; width: 500px;">
+            <img src="{{ data['img_url'] }}" alt="Enhanced Image" style="height: 600px; width: 600px;">
           </div>
         </div>
         {% endfor %}
