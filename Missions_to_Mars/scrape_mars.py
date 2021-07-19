@@ -71,6 +71,12 @@ def scrape_info():
 
     facts_table = tables[1]
 
+    facts_table.columns = ['Description', 'Value']
+
+    facts_table.reset_index(drop=True, inplace=True)
+
+    facts_table = facts_table.to_html(classes="table table-striped")
+
 #     browser.quit()
 
 #     return facts_table
@@ -118,7 +124,7 @@ def scrape_info():
         "news_title": news_title,
         "news_p": news_p,
         "featured_img": featured_img_url,
-        # "facts_table": facts_table, 
+        "facts_table": facts_table, 
         "hs_data_1": hs_data[0]['img_url'],
         "hs_data_2": hs_data[1]['img_url'],
         "hs_data_3": hs_data[2]['img_url'],
